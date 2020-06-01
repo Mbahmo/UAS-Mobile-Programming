@@ -22,12 +22,12 @@ public class SharedPreference {
         Editor.commit();
     }
 
-    public String getValue(Context Context, String key) {
+    public String getValue(Context Context, String Key) {
         SharedPreferences Settings;
         String Text;
 
         Settings = Context.getSharedPreferences(Prefs_Name, android.content.Context.MODE_PRIVATE);
-        Text     = Settings.getString(key, null);
+        Text     = Settings.getString(Key, null);
         return Text;
     }
 

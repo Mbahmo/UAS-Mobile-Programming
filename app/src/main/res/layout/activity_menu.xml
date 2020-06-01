@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -22,6 +20,7 @@
         </TextView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/Testtt"
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal"
@@ -30,7 +29,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
+            android:id="@+id/Menu1"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -70,7 +69,9 @@
             android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:id="@+id/Menu2"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 
     EditText TxtUsername, TxtPassword;
     Button BtnLogin;
-    private SharedPreference SharedPreference;
+    SharedPreference SharedPreferences;
     Activity context = this;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreference = new SharedPreference();
+        SharedPreferences = new SharedPreference();
         TxtUsername      = findViewById(R.id.TxtUsername);
         TxtPassword      = findViewById(R.id.TxtPassword);
         BtnLogin         = findViewById(R.id.ButtonLogin);
@@ -36,7 +36,8 @@ public class MainActivity extends Activity {
                 if(Username.equals("")) {
                     Toast.makeText(getBaseContext(), "Username Masih Kosong !", Toast.LENGTH_LONG).show();
                 } else {
-                    SharedPreference.save(context, "Username", Username);
+                    SharedPreferences.save(context, "username", Username);
+                    System.out.println("Test" + SharedPreferences.getValue(context, "username"));
                     Intent Intent = new Intent(MainActivity.this, MenuActivity.class);
                     startActivity(Intent);
                     Toast.makeText(getBaseContext(), "Berhasil Login !", Toast.LENGTH_LONG).show();
