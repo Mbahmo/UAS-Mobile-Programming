@@ -32,9 +32,10 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String Username = TxtUsername.getText().toString();
+                String Password = TxtPassword.getText().toString();
 
-                if(Username.equals("")) {
-                    Toast.makeText(getBaseContext(), "Username Masih Kosong !", Toast.LENGTH_LONG).show();
+                if(!(Username.equals("admin") && Password.equals("admin"))) {
+                    Toast.makeText(getBaseContext(), "Username / Password anda salah !", Toast.LENGTH_LONG).show();
                 } else {
                     SharedPreferences.save(context, "username", Username);
                     System.out.println("Test" + SharedPreferences.getValue(context, "username"));

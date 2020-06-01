@@ -13,4 +13,16 @@
     <color name="pink">#fe104d</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="address">#2F7092</color>
+    <color name="followers">#0D5D98</color>
+    <color name="headings">#3797CF</color>
+    <color name="solidCircle">#AAFFFFFF</color>
+    <color name="circleBorder">#50FFFFFF</color>
+    <color name="gradStart">#7F8C8D</color>
+    <color name="gradEnd">#000000</color>
+    <color name="followersBg">#D3D3D3</color>
+    <color name="followingBg">#2D3436</color>
+    <color name="grey">#E5E5E5</color>
+
+    <color name="white">#FFFFFF</color>
 </resources>
