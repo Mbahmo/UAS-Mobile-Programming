@@ -44,7 +44,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
 //        System.out.println("TEST");
         switch (v.getId()) {
             case R.id.Menu1:
-                System.out.println("Test");
+                startActivity(new Intent(MenuActivity.this, DosenActivity.class));
                 break;
             case R.id.Menu3:
                 startActivity(new Intent(MenuActivity.this, ProfilActivity.class));

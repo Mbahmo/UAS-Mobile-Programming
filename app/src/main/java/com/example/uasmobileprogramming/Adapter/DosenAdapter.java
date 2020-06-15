@@ -14,10 +14,6 @@ import com.example.uasmobileprogramming.R;
 
 import java.util.List;
 
-/**
- * Created by root on 2/3/17.
- */
-
 public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.MyViewHolder>{
     List<Dosen> mDosenList;
 

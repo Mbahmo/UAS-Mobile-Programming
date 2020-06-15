@@ -38,7 +38,6 @@ public class MainActivity extends Activity {
                     Toast.makeText(getBaseContext(), "Username / Password anda salah !", Toast.LENGTH_LONG).show();
                 } else {
                     SharedPreferences.save(context, "username", Username);
-                    System.out.println("Test" + SharedPreferences.getValue(context, "username"));
                     Intent Intent = new Intent(MainActivity.this, MenuActivity.class);
                     startActivity(Intent);
                     Toast.makeText(getBaseContext(), "Berhasil Login !", Toast.LENGTH_LONG).show();

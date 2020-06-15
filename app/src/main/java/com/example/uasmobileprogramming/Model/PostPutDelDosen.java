@@ -2,9 +2,7 @@ package com.example.uasmobileprogramming.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by root on 2/3/17.
- */
+
 public class PostPutDelDosen {
     @SerializedName("status")
     String status;
@@ -24,10 +22,10 @@ public class PostPutDelDosen {
     public void setMessage(String message) {
         this.message = message;
     }
-    public Dosen getKontak() {
+    public Dosen getDosen() {
         return mDosen;
     }
-    public void setKontak(Dosen Dosen) {
+    public void setDosen(Dosen Dosen) {
         mDosen = Dosen;
     }
 

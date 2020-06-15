@@ -27,10 +27,10 @@ public class GetDosen {
     public void setMessage(String message) {
         this.message = message;
     }
-    public List<Dosen> getListDataKontak() {
+    public List<Dosen> getListDataDosen() {
         return listDataDosen;
     }
-    public void setListDataKontak(List<Dosen> listDataDosen) {
+    public void setListDataDosen(List<Dosen> listDataDosen) {
         this.listDataDosen = listDataDosen;
     }
 }

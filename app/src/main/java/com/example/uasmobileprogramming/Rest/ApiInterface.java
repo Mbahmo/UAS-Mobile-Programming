@@ -3,7 +3,6 @@ package com.example.uasmobileprogramming.Rest;
  * Created by root on 2/3/17.
  */
 
-import com.example.uasmobileprogramming.Model.Dosen;
 import com.example.uasmobileprogramming.Model.GetDosen;
 import com.example.uasmobileprogramming.Model.PostPutDelDosen;
 
@@ -16,18 +15,18 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
 public interface ApiInterface {
-    @GET("kontak_android")
-    Call<GetDosen> getKontak();
+    @GET("dosen_android")
+    Call<GetDosen> getDosen();
     @FormUrlEncoded
-    @POST("kontak")
-    Call<PostPutDelDosen> postKontak(@Field("nama") String nama,
+    @POST("dosen")
+    Call<PostPutDelDosen> postDosen(@Field("nama") String nama,
                                       @Field("nomor") String nomor);
     @FormUrlEncoded
-    @PUT("kontak")
-    Call<PostPutDelDosen> putKontak(@Field("id") String id,
+    @PUT("dosen")
+    Call<PostPutDelDosen> putDosen(@Field("id") String id,
                                      @Field("nama") String nama,
                                      @Field("nomor") String nomor);
     @FormUrlEncoded
-    @HTTP(method = "DELETE", path = "kontak", hasBody = true)
-    Call<PostPutDelDosen> deleteKontak(@Field("id") String id);
+    @HTTP(method = "DELETE", path = "dosen", hasBody = true)
+    Call<PostPutDelDosen> deleteDosen(@Field("IdDosen") String id);
 }

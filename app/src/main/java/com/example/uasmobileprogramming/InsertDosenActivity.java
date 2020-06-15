@@ -32,8 +32,8 @@ public class InsertDosenActivity extends AppCompatActivity {
         btInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<PostPutDelDosen> postKontakCall = mApiInterface.postKontak(edtNama.getText().toString(), edtNomor.getText().toString());
-                postKontakCall.enqueue(new Callback<PostPutDelDosen>() {
+                Call<PostPutDelDosen> postDosenCall = mApiInterface.postDosen(edtNama.getText().toString(), edtNomor.getText().toString());
+                postDosenCall.enqueue(new Callback<PostPutDelDosen>() {
                     @Override
                     public void onResponse(Call<PostPutDelDosen> call, Response<PostPutDelDosen> response) {
                         DosenActivity.da.refresh();

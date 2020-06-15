@@ -2,19 +2,13 @@ package com.example.uasmobileprogramming.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by root on 2/3/17.
- */
-
 public class Dosen {
-    @SerializedName("id")
+    @SerializedName("IdDosen")
     private String id;
-    @SerializedName("nama")
+    @SerializedName("NamaDosen")
     private String nama;
-    @SerializedName("nomor")
+    @SerializedName("NoTelpDosen")
     private String nomor;
-
-    public Dosen(){}
 
     public Dosen(String id, String nama, String nomor) {
         this.id = id;

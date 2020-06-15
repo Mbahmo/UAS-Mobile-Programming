@@ -34,13 +34,13 @@ public class DosenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_dosen);
 
         btIns = (Button) findViewById(R.id.btIns);
         btIns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DosenActivity.this, InsertDosenActivty.class));
+                startActivity(new Intent(DosenActivity.this, InsertDosenActivity.class));
             }
         });
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -52,12 +52,13 @@ public class DosenActivity extends AppCompatActivity {
     }
 
     public void refresh() {
-        Call<GetDosen> dosenCall = mApiInterface.getKontak();
+        Call<GetDosen> dosenCall = mApiInterface.getDosen();
         dosenCall.enqueue(new Callback<GetDosen>() {
             @Override
             public void onResponse(Call<GetDosen> call, Response<GetDosen>
                     response) {
-                List<Dosen> DosenList = response.body().getListDataKontak();
+                List<Dosen> DosenList = response.body().getListDataDosen();
+                System.out.println("tesssstatststs" + DosenList.toString());
                 Log.d("Retrofit Get", "Jumlah data Kontak: " +
                         DosenList.size());
                 mAdapter = new DosenAdapter(DosenList);

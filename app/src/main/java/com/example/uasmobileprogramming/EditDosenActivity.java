@@ -41,11 +41,11 @@ public class EditDosenActivity extends AppCompatActivity {
         btUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<PostPutDelDosen> updateKontakCall = mApiInterface.putKontak(
+                Call<PostPutDelDosen> updateDosenCall = mApiInterface.putDosen(
                         edtId.getText().toString(),
                         edtNama.getText().toString(),
                         edtNomor.getText().toString());
-                updateKontakCall.enqueue(new Callback<PostPutDelDosen>() {
+                updateDosenCall.enqueue(new Callback<PostPutDelDosen>() {
                     @Override
                     public void onResponse(Call<PostPutDelDosen> call, Response<PostPutDelDosen> response) {
                         DosenActivity.da.refresh();
@@ -64,8 +64,8 @@ public class EditDosenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (edtId.getText().toString().trim().isEmpty()==false){
-                    Call<PostPutDelDosen> deleteKontak = mApiInterface.deleteKontak(edtId.getText().toString());
-                    deleteKontak.enqueue(new Callback<PostPutDelDosen>() {
+                    Call<PostPutDelDosen> deleteDosen = mApiInterface.deleteDosen(edtId.getText().toString());
+                    deleteDosen.enqueue(new Callback<PostPutDelDosen>() {
                         @Override
                         public void onResponse(Call<PostPutDelDosen> call, Response<PostPutDelDosen> response) {
                             DosenActivity.da.refresh();
@@ -77,7 +77,7 @@ public class EditDosenActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                         }
                     });
-                }else{
+                } else {
                     Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
                 }
             }
