@@ -9,42 +9,56 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
     <TextView
-        android:id="@+id/tvNama"
+        android:id="@+id/tvNimMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama : "
+        android:text="NIM : "
         android:textSize="20sp"/>
     <TextView
-        android:id="@+id/tvNomor"
+    android:id="@+id/tvNamaMahasiswa"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Nama : "
+    android:layout_below="@id/tvNimMahasiswa"
+    android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNomorMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nomor : "
-        android:layout_below="@id/tvNama"
+        android:layout_below="@id/tvNamaMahasiswa"
         android:textSize="20sp"/>
     <EditText
-        android:id="@+id/edtNama"
+        android:id="@+id/edtNimMahasiwa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Nama"
-        android:layout_toRightOf="@+id/tvNama"
-        android:layout_alignBaseline="@+id/tvNama"/>
+        android:layout_toRightOf="@+id/tvNimMahasiswa"
+        android:layout_alignBaseline="@+id/tvNimMahasiswa"/>
     <EditText
-        android:id="@+id/edtNomor"
+        android:id="@+id/edtNamaMahasiwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:layout_toRightOf="@+id/tvNamaMahasiswa"
+        android:layout_alignBaseline="@+id/tvNamaMahasiswa"/>
+    <EditText
+        android:id="@+id/edtNomorMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Nomor"
-        android:layout_toRightOf="@+id/tvNomor"
-        android:layout_alignBaseline="@+id/tvNomor"/>
+        android:layout_toRightOf="@+id/tvNomorMahasiswa"
+        android:layout_alignBaseline="@+id/tvNomorMahasiswa"/>
     <LinearLayout
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/tvNomor"
+        android:layout_below="@+id/tvNomorMahasiswa"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
         <Button
-            android:id="@+id/btInserting"
+            android:id="@+id/btInsertingMahasiswa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Insert"
@@ -58,7 +72,7 @@
             android:layout_marginLeft="0dp"
             android:letterSpacing="0.2"/>
         <Button
-            android:id="@+id/btBackGo"
+            android:id="@+id/btBackGoMahasiswa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"

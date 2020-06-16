@@ -1,13 +1,14 @@
-package com.example.uasmobileprogramming.Model;
+package com.example.uasmobileprogramming.Model.Dosen;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
 
-public class PostPutDelDosen {
+public class GetDosen {
     @SerializedName("status")
     String status;
     @SerializedName("result")
-    Dosen mDosen;
+    List<Dosen> listDataDosen;
     @SerializedName("message")
     String message;
     public String getStatus() {
@@ -22,11 +23,10 @@ public class PostPutDelDosen {
     public void setMessage(String message) {
         this.message = message;
     }
-    public Dosen getDosen() {
-        return mDosen;
+    public List<Dosen> getListDataDosen() {
+        return listDataDosen;
     }
-    public void setDosen(Dosen Dosen) {
-        mDosen = Dosen;
+    public void setListDataDosen(List<Dosen> listDataDosen) {
+        this.listDataDosen = listDataDosen;
     }
-
 }

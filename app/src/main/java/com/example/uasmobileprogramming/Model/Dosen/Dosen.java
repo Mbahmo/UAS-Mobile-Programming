@@ -1,4 +1,4 @@
-package com.example.uasmobileprogramming.Model;
+package com.example.uasmobileprogramming.Model.Dosen;
 
 import com.google.gson.annotations.SerializedName;
 

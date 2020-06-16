@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.uasmobileprogramming.Model.PostPutDelDosen;
+import com.example.uasmobileprogramming.Model.Dosen.PostPutDelDosen;
 import com.example.uasmobileprogramming.Rest.ApiClient;
 import com.example.uasmobileprogramming.Rest.ApiInterface;
 

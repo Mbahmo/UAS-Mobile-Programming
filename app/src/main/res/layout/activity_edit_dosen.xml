@@ -12,20 +12,20 @@
         android:id="@+id/tvId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Id Kontak : "
+        android:text="ID Dosen : "
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tvNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama : "
+        android:text="Nama   : "
         android:layout_below="@id/tvId"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tvNomor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nomor : "
+        android:text="No Telp : "
         android:layout_below="@id/tvNama"
         android:textSize="20sp"/>
     <EditText
@@ -56,24 +56,47 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/tvNomor"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
         <Button
             android:id="@+id/btUpdate2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"/>
-
+            android:text="Update"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="0dp"
+            android:letterSpacing="0.2"/>
         <Button
             android:id="@+id/btDelete2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"/>
+            android:text="Delete"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:layout_margin="5dp"
+            android:letterSpacing="0.2"/>
         <Button
             android:id="@+id/btBackGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"/>
+            android:text="Back"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:layout_margin="5dp"
+            android:letterSpacing="0.2"/>
     </LinearLayout>
 </RelativeLayout>

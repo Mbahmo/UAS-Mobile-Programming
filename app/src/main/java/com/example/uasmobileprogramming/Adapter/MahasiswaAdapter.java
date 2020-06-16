@@ -10,38 +10,39 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uasmobileprogramming.EditDosenActivity;
 import com.example.uasmobileprogramming.Model.Dosen.Dosen;
+import com.example.uasmobileprogramming.Model.Mahasiswa.Mahasiswa;
 import com.example.uasmobileprogramming.R;
 
 import java.util.List;
 
-public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.MyViewHolder>{
-    List<Dosen> mDosenList;
+public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MyViewHolder>{
+    List<Mahasiswa> mMahasiswaList;
 
-    public DosenAdapter(List <Dosen> DosenList) {
-        mDosenList = DosenList;
+    public MahasiswaAdapter(List <Mahasiswa> MahasiswaList) {
+        mMahasiswaList = MahasiswaList;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder (ViewGroup parent,int viewType){
-        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.dosen_list, parent, false);
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.mahasiswa_list, parent, false);
         MyViewHolder mViewHolder = new MyViewHolder(mView);
         return mViewHolder;
     }
 
     @Override
     public void onBindViewHolder (MyViewHolder holder,final int position){
-        holder.mTextViewId.setText("ID : " + mDosenList.get(position).getId());
-        holder.mTextViewNama.setText("Nama Dosen : " + mDosenList.get(position).getNama());
-        holder.mTextViewNomor.setText("No Telp : " + mDosenList.get(position).getNomor());
+        holder.mTextViewId.setText("NIM : " + mMahasiswaList.get(position).getId());
+        holder.mTextViewNama.setText("Nama Dosen : " + mMahasiswaList.get(position).getNama());
+        holder.mTextViewNomor.setText("No Telp : " + mMahasiswaList.get(position).getNomor());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), EditDosenActivity.class);
 
-                mIntent.putExtra("Id", mDosenList.get(position).getId());
-                mIntent.putExtra("Nama", mDosenList.get(position).getNama());
-                mIntent.putExtra("Nomor", mDosenList.get(position).getNomor());
+                mIntent.putExtra("Nim", mMahasiswaList.get(position).getId());
+                mIntent.putExtra("Nama", mMahasiswaList.get(position).getNama());
+                mIntent.putExtra("Nomor", mMahasiswaList.get(position).getNomor());
 
                 view.getContext().startActivity(mIntent);
             }
@@ -50,7 +51,7 @@ public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.MyViewHolder
 
     @Override
     public int getItemCount () {
-        return mDosenList.size();
+        return mMahasiswaList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -58,9 +59,9 @@ public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.MyViewHolder
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            mTextViewId = (TextView) itemView.findViewById(R.id.tvId);
-            mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
-            mTextViewNomor = (TextView) itemView.findViewById(R.id.tvNomor);
+            mTextViewId = (TextView) itemView.findViewById(R.id.tvIdMahasiswa);
+            mTextViewNama = (TextView) itemView.findViewById(R.id.tvNamaMahasiswa);
+            mTextViewNomor = (TextView) itemView.findViewById(R.id.tvNomorMahasiswa);
         }
     }
 }

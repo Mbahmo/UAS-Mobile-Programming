@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
     <Button
-        android:id="@+id/btIns"
+        android:id="@+id/btInsMahasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Insert"
@@ -24,9 +24,9 @@
         android:letterSpacing="0.2"/>
 
     <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerView"
+    android:id="@+id/recyclerViewMahasiswa"
     android:scrollbars="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@+id/btIns" />
+    android:layout_below="@+id/btInsMahasiswa" />
 </RelativeLayout>
