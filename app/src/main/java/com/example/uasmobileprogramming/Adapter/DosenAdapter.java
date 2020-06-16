@@ -33,13 +33,16 @@ public class DosenAdapter extends RecyclerView.Adapter<DosenAdapter.MyViewHolder
         holder.mTextViewId.setText("Id = " + mDosenList.get(position).getId());
         holder.mTextViewNama.setText("Nama = " + mDosenList.get(position).getNama());
         holder.mTextViewNomor.setText("Nomor = " + mDosenList.get(position).getNomor());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), EditDosenActivity.class);
+
                 mIntent.putExtra("Id", mDosenList.get(position).getId());
                 mIntent.putExtra("Nama", mDosenList.get(position).getNama());
                 mIntent.putExtra("Nomor", mDosenList.get(position).getNomor());
+
                 view.getContext().startActivity(mIntent);
             }
         });

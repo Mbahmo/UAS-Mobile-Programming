@@ -1,7 +1,4 @@
 package com.example.uasmobileprogramming.Rest;
-/**
- * Created by root on 2/3/17.
- */
 
 import com.example.uasmobileprogramming.Model.GetDosen;
 import com.example.uasmobileprogramming.Model.PostPutDelDosen;
@@ -19,14 +16,14 @@ public interface ApiInterface {
     Call<GetDosen> getDosen();
     @FormUrlEncoded
     @POST("dosen")
-    Call<PostPutDelDosen> postDosen(@Field("nama") String nama,
-                                      @Field("nomor") String nomor);
+    Call<PostPutDelDosen> postDosen(@Field("namadosen") String nama,
+                                      @Field("notelp") String nomor);
     @FormUrlEncoded
     @PUT("dosen")
-    Call<PostPutDelDosen> putDosen(@Field("id") String id,
-                                     @Field("nama") String nama,
-                                     @Field("nomor") String nomor);
+    Call<PostPutDelDosen> putDosen(@Field("iddosen") String id,
+                                     @Field("namadosen") String nama,
+                                     @Field("notelp") String nomor);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "dosen", hasBody = true)
-    Call<PostPutDelDosen> deleteDosen(@Field("IdDosen") String id);
+    Call<PostPutDelDosen> deleteDosen(@Field("iddosen") String id);
 }

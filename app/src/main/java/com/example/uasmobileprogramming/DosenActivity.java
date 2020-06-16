@@ -58,7 +58,6 @@ public class DosenActivity extends AppCompatActivity {
             public void onResponse(Call<GetDosen> call, Response<GetDosen>
                     response) {
                 List<Dosen> DosenList = response.body().getListDataDosen();
-                System.out.println("tesssstatststs" + DosenList.toString());
                 Log.d("Retrofit Get", "Jumlah data Kontak: " +
                         DosenList.size());
                 mAdapter = new DosenAdapter(DosenList);
