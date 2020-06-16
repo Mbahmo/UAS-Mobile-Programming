@@ -26,7 +26,7 @@ public class GetMahasiswa {
     public List<Mahasiswa> getListDataMahasiswa() {
         return listDataMahasiswa;
     }
-    public void setListDataDosen(List<Mahasiswa> listDataDMahasiswa) {
+    public void setListDataMahasiswa(List<Mahasiswa> listDataMahasiswa) {
         this.listDataMahasiswa = listDataMahasiswa;
     }
 }

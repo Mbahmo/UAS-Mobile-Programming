@@ -24,8 +24,8 @@
             android:id="@+id/tvNamaMahasiswa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Nama Dosen"
-            android:layout_below="@id/tvId"
+            android:hint="Nama Mahasiswa"
+            android:layout_below="@id/tvIdMahasiswa"
             android:textSize="15sp"
             />
         <TextView

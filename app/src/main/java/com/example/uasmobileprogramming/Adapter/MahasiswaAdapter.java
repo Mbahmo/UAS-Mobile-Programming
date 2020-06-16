@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uasmobileprogramming.EditDosenActivity;
+import com.example.uasmobileprogramming.EditMahasiswaActivity;
 import com.example.uasmobileprogramming.Model.Dosen.Dosen;
 import com.example.uasmobileprogramming.Model.Mahasiswa.Mahasiswa;
 import com.example.uasmobileprogramming.R;
@@ -32,13 +33,13 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.MyVi
     @Override
     public void onBindViewHolder (MyViewHolder holder,final int position){
         holder.mTextViewId.setText("NIM : " + mMahasiswaList.get(position).getId());
-        holder.mTextViewNama.setText("Nama Dosen : " + mMahasiswaList.get(position).getNama());
+        holder.mTextViewNama.setText("Nama Mahasiswa : " + mMahasiswaList.get(position).getNama());
         holder.mTextViewNomor.setText("No Telp : " + mMahasiswaList.get(position).getNomor());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mIntent = new Intent(view.getContext(), EditDosenActivity.class);
+                Intent mIntent = new Intent(view.getContext(), EditMahasiswaActivity.class);
 
                 mIntent.putExtra("Nim", mMahasiswaList.get(position).getId());
                 mIntent.putExtra("Nama", mMahasiswaList.get(position).getNama());

@@ -35,8 +35,8 @@ public interface ApiInterface {
                                    @Field("notelp") String nomor);
     @FormUrlEncoded
     @PUT("mahasiswa")
-    Call<PostPutDelDosen> putMahasiswa(@Field("nim") String id,
-                                   @Field("namahasiswa") String nama,
+    Call<PostPutDelMahasiswa> putMahasiswa(@Field("nim") String id, @Field("nimbaru") String idbaru,
+                                   @Field("namamahasiswa") String nama,
                                    @Field("notelp") String nomor);
 
     @FormUrlEncoded
@@ -44,7 +44,7 @@ public interface ApiInterface {
     Call<PostPutDelDosen> deleteDosen(@Field("iddosen") String id);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "mahasiswa", hasBody = true)
-    Call<PostPutDelDosen> deleteMahasiswa(@Field("nim") String id);
+    Call<PostPutDelMahasiswa> deleteMahasiswa(@Field("nim") String id);
 
 
 }

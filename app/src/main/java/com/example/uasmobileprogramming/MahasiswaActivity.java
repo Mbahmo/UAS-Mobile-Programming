@@ -42,7 +42,7 @@ public class MahasiswaActivity extends AppCompatActivity {
         btIns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MahasiswaActivity.this, InsertDosenActivity.class));
+                startActivity(new Intent(MahasiswaActivity.this, InsertMahasiswaActivity.class));
             }
         });
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerViewMahasiswa);

@@ -38,7 +38,7 @@ public class InsertMahasiswaActivity extends AppCompatActivity {
                 postMahasiswaCall.enqueue(new Callback<PostPutDelMahasiswa>() {
                     @Override
                     public void onResponse(Call<PostPutDelMahasiswa> call, Response<PostPutDelMahasiswa> response) {
-                        DosenActivity.da.refresh();
+                        MahasiswaActivity.ma.refresh();
                         finish();
                     }
 
