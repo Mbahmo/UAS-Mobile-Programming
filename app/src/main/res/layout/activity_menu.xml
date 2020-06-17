@@ -59,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="CRUD Data Mahasiswa"
+                    android:text="CRUD Data Dosen"
                     android:padding="5dp"
                     android:textColor="#001"/>
             </LinearLayout>
@@ -89,7 +89,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:textColor="#001"
-                    android:text="Kelas"/>
+                    android:text="Mahasiswa"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -99,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="CRUD Data Kelas"
+                    android:text="CRUD Data Mahasiswa"
                     android:padding="5dp"
                     android:textColor="#001"/>
 
