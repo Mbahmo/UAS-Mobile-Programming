@@ -72,4 +72,9 @@ public class MahasiswaActivity extends AppCompatActivity {
             }
         });
     }
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(MahasiswaActivity.this, MenuActivity.class));
+        finish();
+    }
 }

@@ -69,4 +69,10 @@ public class DosenActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(DosenActivity.this, MenuActivity.class));
+        finish();
+    }
 }

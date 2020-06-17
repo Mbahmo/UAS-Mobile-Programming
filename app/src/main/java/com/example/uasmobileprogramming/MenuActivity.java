@@ -12,6 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.uasmobileprogramming.Model.Mahasiswa.Mahasiswa;
+
 public class MenuActivity extends Activity implements View.OnClickListener {
     SharedPreference SharedPreferences;
     Activity context = this;
@@ -46,6 +48,9 @@ public class MenuActivity extends Activity implements View.OnClickListener {
             case R.id.Menu1:
                 startActivity(new Intent(MenuActivity.this, DosenActivity.class));
                 break;
+            case R.id.Menu2:
+                startActivity(new Intent(MenuActivity.this, MahasiswaActivity.class));
+                break;
             case R.id.Menu3:
                 startActivity(new Intent(MenuActivity.this, ProfilActivity.class));
                 break;
@@ -55,6 +60,7 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        startActivity(new Intent(MenuActivity.this, MainActivity.class));
         finish();
     }
 }
